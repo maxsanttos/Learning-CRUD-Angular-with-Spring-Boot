@@ -13,7 +13,9 @@ export class CoursesComponent implements OnInit{
 
 
   constructor(){
-    this.courses = [];
+    this.courses = [
+      {_id:'1', name:'Angular',category:'front-end'}
+    ];
   }
 
   ngOnInit(): void {
