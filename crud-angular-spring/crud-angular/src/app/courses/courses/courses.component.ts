@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Course } from '../model/course';
 
 @Component({
   selector: 'app-courses',
@@ -7,11 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursesComponent implements OnInit{
 
-  courses:any[] = [];
+  courses: Course[];
+  displayedColumns = ['name', 'category'];
 
-  constructor(){}
+
+  constructor(){
+    this.courses = [];
+  }
+
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
   }
 
 }
