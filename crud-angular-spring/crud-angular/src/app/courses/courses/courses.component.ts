@@ -8,14 +8,15 @@ import { Course } from '../model/course';
 })
 export class CoursesComponent implements OnInit{
 
-  courses: Course[];
+  courses: Course[] = [
+    {_id:'1', name:'Angular',category:'Front-end'}
+  ];
+  
   displayedColumns = ['name', 'category'];
 
 
   constructor(){
-    this.courses = [
-      {_id:'1', name:'Angular',category:'front-end'}
-    ];
+
   }
 
   ngOnInit(): void {
