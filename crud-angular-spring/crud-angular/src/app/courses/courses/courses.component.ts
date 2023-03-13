@@ -11,12 +11,12 @@ export class CoursesComponent implements OnInit{
   courses: Course[] = [
     {_id:'1', name:'Angular',category:'Front-end'}
   ];
-  
+
   displayedColumns = ['name', 'category'];
 
 
   constructor(){
-
+    //this.courses = [];
   }
 
   ngOnInit(): void {
