@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 import { Course } from '../model/course';
 import { CourseService } from '../services/course.service';
@@ -21,7 +22,14 @@ export class CoursesComponent implements OnInit{
   constructor(private courseService:CourseService){
     //this.courses = [];
     //this.courseService = new CourseService();
-    this.courses$ = this.courseService.list();
+    this.courses$ = this.courseService.list()
+    .pipe(
+      catchError(error =>  {
+        console.log(error)
+        return of([])
+      })
+    );
+
   }
 
   ngOnInit(): void {
