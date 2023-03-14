@@ -2,16 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { ErrorDialogComponent } from '../../../shared/components/error-dialog/error-dialog.component';
+import { Course } from '../model/course';
 
-import { Course } from './model/course';
-import { ErrorDialogComponent } from '../../shared/components/error-dialog/error-dialog.component';
-import { CourseService } from './services/course.service';
+import { CourseService } from '../services/course.service';
+
 
 
 @Component({
   selector: 'app-courses',
-  templateUrl: './containers/courses.component.html',
-  styleUrls: ['./containers/courses.component.scss']
+  templateUrl: './courses.component.html',
+  styleUrls: ['./courses.component.scss']
 })
 export class CoursesComponent implements OnInit{
 
