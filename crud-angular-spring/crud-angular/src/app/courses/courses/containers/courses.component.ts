@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { ErrorDialogComponent } from '../../../shared/components/error-dialog/error-dialog.component';
-import { Course } from '../model/course';
 
+import { Course } from '../model/course';
 import { CourseService } from '../services/course.service';
 
 
@@ -37,13 +36,13 @@ export class CoursesComponent implements OnInit{
     );
 
   }
-  onError(errorMsg: string){
+ /*onError(errorMsg: string){
     this.dialog.open(ErrorDialogComponent ,{
       data:errorMsg
 
     });
 
-  }
+  }*/
 
   ngOnInit(): void {
 
