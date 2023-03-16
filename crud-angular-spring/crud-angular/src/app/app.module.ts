@@ -6,13 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ErrorDialogComponent } from './shared/components/error-dialog/error-dialog.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ErrorDialogComponent
   ],
   imports: [
     BrowserModule,
