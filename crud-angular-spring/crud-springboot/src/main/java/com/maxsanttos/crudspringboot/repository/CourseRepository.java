@@ -6,6 +6,5 @@ import org.springframework.stereotype.Repository;
 import com.maxsanttos.crudspringboot.model.Course;
 
 @Repository
-public interface CourseRepository extends JpaRepository<Course,Long> {
-    
+public interface CourseRepository extends JpaRepository<Course,Long> {  
 }

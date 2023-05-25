@@ -22,10 +22,11 @@ public class CrudSpringbootApplication {
 
 			Course c = new Course();
 
-			c.setName("Angulae com Spring");
+			c.setName("Angular com Spring");
 			c.setCategory("front-end");
 
 			courseRepository.save(c);
 		};
 	}
 }
+//9:50

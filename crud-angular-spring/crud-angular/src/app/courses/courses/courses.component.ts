@@ -20,8 +20,7 @@ export class CoursesComponent implements OnInit{
 
   constructor(private courseService: CourseService,
     public dialog: MatDialog){
-    //this.courses = [];
-    //this.courseService = new CourseService();
+
     this.courses$ = this.courseService.list()
     .pipe(
       catchError(error => {
@@ -37,8 +36,6 @@ export class CoursesComponent implements OnInit{
     });
   }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
 }
